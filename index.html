@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birriería El Moreno | Donde está lo bueno</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- ENCABEZADO PRINCIPAL -->
+    <header>
+        <div class="logo-container">
+            <span class="badge">🌶️ El Verdadero Sabor</span>
+            <h1>BIRRIERÍA EL MORENO</h1>
+            <p>¡Pásele, pásele a Birriería El Moreno, donde está lo bueno!</p>
+        </div>
+    </header>
+
+    <!-- BARRA DE FILTROS INTERACTIVOS Y UBICACIÓN -->
+    <nav class="categorias">
+        <button class="btn-categoria active" data-categoria="todos">🔥 Todo el Menú</button>
+        <button class="btn-categoria" data-categoria="platillos">🥩 Birria & Platillos</button>
+        <button class="btn-categoria" data-categoria="tacos">🌮 Tacos & Quesabirrias</button>
+        <button class="btn-categoria" data-categoria="bebidas">🥤 Bebidas Heladitas</button>
+        <button class="btn-ubicacion" onclick="abrirUbicacion()">📍 Ubicación</button>
+    </nav>
+
+    <main>
+        <section class="galeria-grid">
+
+            <!-- PLATILLO 1 -->
+            <div class="tarjeta-platillo" data-categoria="platillos" onclick="abrirModal('Plato de Birria Don Moreno', 'img/birria.jpg', 'Servida con su carne suavecita que se deshace sola, bien jugosa y acompañada de tortillas recién saliditas del comal, cebollita, cilantro y sus buenas salsas bravas.')">
+                <div class="img-box">
+                    <img src="img/birria.jpg" alt="Birria">
+                </div>
+                <div class="info-platillo">
+                    <h3>Plato de Birria Don Moreno</h3>
+                    <p>Carne suavecita que se deshace sola en la boca.</p>
+                    <button class="btn-ver">Ver detalles ➔</button>
+                </div>
+            </div>
+
+            <!-- PLATILLO 2 -->
+            <div class="tarjeta-platillo" data-categoria="platillos" onclick="abrirModal('Consomé Calientito', 'img/consome.jpg', 'Calientito, grasosito en su punto y bien cargado de sabor. El compañero obligatorio e inseparable de un buen taquito para chopear como se debe.')">
+                <div class="img-box">
+                    <img src="img/consome.jpg" alt="Consomé">
+                </div>
+                <div class="info-platillo">
+                    <h3>Consomé Calientito</h3>
+                    <p>Calientito y rico, el acompañante perfecto de un buen taquito.</p>
+                    <button class="btn-ver">Ver detalles ➔</button>
+                </div>
+            </div>
+
+            <!-- PLATILLO 3 -->
+            <div class="tarjeta-platillo" data-categoria="tacos" onclick="abrirModal('Orden de Tacos Dorados', 'img/tacos.jpg', 'Tortilla bien doradita en la grasa de la birria, rellena hasta el tope de pura carne de calidad con su cilantro, cebolla y la salsa de la casa.')">
+                <div class="img-box">
+                    <img src="img/tacos.jpg" alt="Tacos Dorados">
+                </div>
+                <div class="info-platillo">
+                    <h3>Orden de Tacos Dorados</h3>
+                    <p>Bien doraditos en el comal y cargados de pura carne sabrosa.</p>
+                    <button class="btn-ver">Ver detalles ➔</button>
+                </div>
+            </div>
+
+            <!-- PLATILLO 4 -->
+            <div class="tarjeta-platillo" data-categoria="tacos" onclick="abrirModal('Quesabirria Estilo El Moreno', 'img/quesabirria.jpg', 'Mucha quesadilla con bastante queso derretido que se estira y birria jugosa por dentro. ¡Una verdadera joya para los de buen diente!')">
+                <div class="img-box">
+                    <img src="img/quesabirria.jpg" alt="Quesabirria">
+                </div>
+                <div class="info-platillo">
+                    <h3>Quesabirria Especial</h3>
+                    <p>Con harto queso gratinado y carne bien sazonada.</p>
+                    <button class="btn-ver">Ver detalles ➔</button>
+                </div>
+            </div>
+
+            <!-- PLATILLO 5 -->
+            <div class="tarjeta-platillo" data-categoria="platillos" onclick="abrirModal('La Sabrosa (Especial de la Casa)', 'img/sabrosa.jpg', 'Sazón tradicional único. Un platillo preparado para los verdaderos amantes de la buena comida que no se conforman con cualquier cosa.')">
+                <div class="img-box">
+                    <img src="img/sabrosa.jpg" alt="La Sabrosa">
+                </div>
+                <div class="info-platillo">
+                    <h3>La Sabrosa Especial</h3>
+                    <p>Preparada con la receta secreta que no falla jamás.</p>
+                    <button class="btn-ver">Ver detalles ➔</button>
+                </div>
+            </div>
+
+            <!-- BEBIDA (COCA-COLA) -->
+            <div class="tarjeta-platillo" data-categoria="bebidas" onclick="abrirModal('Coca-Cola de Vidrio Bien Helada', 'img/coca.jpg', '¡Tómate tu Coca bien helada! En botella de vidrio para que raspe sabroso en la garganta y baje todo el festín de birria.')">
+                <div class="img-box">
+                    <img src="img/coca.jpg" alt="Coca Cola Bien Helada">
+                </div>
+                <div class="info-platillo">
+                    <h3>Coca-Cola Bien Helada</h3>
+                    <p>¡Tómate tu Coca bien helada para cortar la grasa!</p>
+                    <button class="btn-ver">Ver detalles ➔</button>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <!-- BOTÓN FLOTANTE DE WHATSAPP -->
+    <a href="https://wa.me/526645179580?text=Hola,%20quisiera%20hacer%20un%20pedido%20en%20Birrier%C3%ADa%20El%20Moreno" class="btn-whatsapp-flotante" target="_blank" title="Pedir por WhatsApp">
+        💬 Pedir por WhatsApp
+    </a>
+
+    <!-- MODAL DE DETALLES DEL PLATILLO -->
+    <div id="modal-platillo" class="modal">
+        <div class="modal-contenido">
+            <span class="cerrar" onclick="cerrarModal()">&times;</span>
+            <img id="modal-img" src="" alt="Platillo">
+            <h2 id="modal-titulo">Título</h2>
+            <p id="modal-desc">Descripción detallada...</p>
+            <div class="modal-footer">
+                <button class="btn-pedir" onclick="pedirPlatillo()">📱 Pedir por WhatsApp</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL DE UBICACIÓN -->
+    <div id="modal-ubicacion" class="modal">
+        <div class="modal-contenido">
+            <span class="cerrar" onclick="cerrarUbicacion()">&times;</span>
+            <h2>📍 ¿Dónde nos encontramos?</h2>
+            <p><strong>Dirección:</strong> Natura Bosques Templarios frente a Bodega Aurrerá</p>
+            <img src="img/ubicacion.jpg" alt="Mapa de Ubicación" style="width:100%; border-radius: 12px; margin-top: 15px;">
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 - Birriería El Moreno | ¡Donde está lo bueno!</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
